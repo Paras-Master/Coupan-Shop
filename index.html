@@ -1,27 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CouponVault – Buy a Single Code</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Buy Exclusive Coupon Codes — CouponVault</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <div class="container">
-    <h1>Buy a Single Coupon Code</h1>
-    <p>Choose your coupon and get the code delivered via Discord DM. No subscription—pay only for the codes you use.</p>
+  <header class="header-fancy">
+    <img src="logo.png" alt="CouponVault Logo" class="logo-fancy"/>
+    <h1 class="title-fancy">Buy Exclusive Coupon Codes</h1>
+    <p class="intro">
+      Instantly access premium coupons for your favorite brands. No subscriptions—pay for only the codes you want, delivered via Discord direct message!
+    </p>
+  </header>
 
-    <a href="https://discord.gg/yourServerCode" class="btn" target="_blank" rel="noopener">
-      Join Our Discord
-    </a>
+  <main class="container">
+    <section class="grid-2">
+      <div class="info-box coupon-card">
+        <img src="amazon.png" alt="Amazon" class="brand-img"/>
+        <h2>Amazon India</h2>
+        <p>
+          <span class="badge-offer">50% OFF Electronics</span><br>
+          <span class="price-label">₹25 / code</span>
+        </p>
+        <div class="hover-container">
+          <button class="summary-btn">Details</button>
+          <div class="hover-popup">
+            <h3>Details</h3>
+            <ul>
+              <li>Single-use code</li>
+              <li>Valid for 30 days</li>
+              <li>Delivered via Discord DM</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://discord.gg/yourServerCode" class="action-btn" target="_blank">Get Code</a>
+      </div>
 
-    <ul class="steps">
-      <li>1. Click “Join Our Discord” to enter the server.</li>
-      <li>2. Pick the coupon you want in <strong>#shop</strong> channel.</li>
-      <li>3. Pay for that specific code via UPI/Bank (details in <strong>#payment-info</strong>).</li>
-      <li>4. Send payment screenshot to <strong>@Admin</strong>.</li>
-      <li>5. Receive your single-use coupon code via DM.</li>
-    </ul>
-  </div>
+      <div class="info-box coupon-card">
+        <img src="flipkart.png" alt="Flipkart" class="brand-img"/>
+        <h2>Flipkart</h2>
+        <p>
+          <span class="badge-offer">35% OFF Fashion</span><br>
+          <span class="price-label">₹20 / code</span>
+        </p>
+        <div class="hover-container">
+          <button class="summary-btn">Details</button>
+          <div class="hover-popup">
+            <h3>Details</h3>
+            <ul>
+              <li>Works on orders above ₹999</li>
+              <li>Valid till month end</li>
+              <li>WhatsApp support too!</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://discord.gg/yourServerCode" class="action-btn" target="_blank">Get Code</a>
+      </div>
+
+      <div class="info-box coupon-card">
+        <img src="zomato.png" alt="Zomato" class="brand-img"/>
+        <h2>Zomato</h2>
+        <p>
+          <span class="badge-offer">Free Delivery</span><br>
+          <span class="price-label">₹10 / code</span>
+        </p>
+        <div class="hover-container">
+          <button class="summary-btn">Details</button>
+          <div class="hover-popup">
+            <h3>Details</h3>
+            <ul>
+              <li>Applicable for all users</li>
+              <li>Expires this weekend</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://discord.gg/yourServerCode" class="action-btn" target="_blank">Get Code</a>
+      </div>
+
+      <div class="info-box coupon-card">
+        <img src="myntra.png" alt="Myntra" class="brand-img"/>
+        <h2>Myntra</h2>
+        <p>
+          <span class="badge-offer">60% OFF Fashion</span><br>
+          <span class="price-label">₹25 / code</span>
+        </p>
+        <div class="hover-container">
+          <button class="summary-btn">Details</button>
+          <div class="hover-popup">
+            <h3>Details</h3>
+            <ul>
+              <li>On select brands</li>
+              <li>Valid for 15 days</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://discord.gg/yourServerCode" class="action-btn" target="_blank">Get Code</a>
+      </div>
+    </section>
+
+    <section class="info-box instructions-card">
+      <h2>How It Works?</h2>
+      <ol>
+        <li>Click <strong>Get Code</strong> for your brand above.</li>
+        <li>Join our Discord server.</li>
+        <li>Go to <b>#buy-code</b> channel, pick your coupon and check payment details.</li>
+        <li>Pay the listed amount via UPI/bank (info in <b>#payment-info</b>).</li>
+        <li>Send your payment proof to <b>@Admin</b>.</li>
+        <li>You'll receive your code via Discord DM within 1 hour!</li>
+      </ol>
+      <div class="disc-brand-row">
+        <img src="amazon.png" alt="Amazon"/>
+        <img src="flipkart.png" alt="Flipkart"/>
+        <img src="zomato.png" alt="Zomato"/>
+        <img src="myntra.png" alt="Myntra"/>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-fancy">
+    &copy; 2025 CouponVault | Direct-to-Discord. Secure, instant & no subscriptions!
+  </footer>
+
+  <script>
+    document.querySelectorAll('.hover-container').forEach(container => {
+      const btn = container.querySelector('.summary-btn');
+      const popup = container.querySelector('.hover-popup');
+      btn.addEventListener('mouseover', () => popup.classList.add('visible'));
+      btn.addEventListener('mouseout', () => popup.classList.remove('visible'));
+      btn.addEventListener('focus', () => popup.classList.add('visible'));
+      btn.addEventListener('blur', () => popup.classList.remove('visible'));
+    });
+  </script>
 </body>
 </html>
